@@ -1,0 +1,21 @@
+<label>
+    <h1>Add Story Form</h1>
+</label>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 div md-12 lg-12 xl-12">
+
+            <label>
+                <input type="text"  class="form form-control" placeholder="Story Name" [(ngModel)]="storyName" name="storyName">
+            </label>
+            <label>
+                <input type="text" class="form form-control" placeholder="Story Point" [(ngModel)]="storyPoint" name="storyPoint">
+            </label>
+            <label>
+                <button class="button" (click)="addUserStory()">ADD STORY</button>
+            </label>
+        </div>
+    </div>
+</div>

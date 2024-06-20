@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color: #555555;
+}
+
+label{
+    margin-bottom: 100px;
+    display: block;
+}

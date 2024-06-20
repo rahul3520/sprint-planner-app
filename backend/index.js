@@ -2,10 +2,11 @@ import express, { response } from 'express';
 import { PORT, mongoDBURL } from './config.js';
 import mongoose from 'mongoose';
 import { Story } from './models/storyModel.js'; 
+import cors from "cors";
 
 const app = express();
 
-app.use(express.json());
+app.use(express.json(),cors());
 
 app.post('/add/story', async(request,response) =>{
 
@@ -81,11 +82,12 @@ app.delete('/delete/stories', async(request,response)=>{
 
         const result = await Story.deleteMany();
 
-        if(!result.length){
-            return response.status(404).json({message:"Sprint is empty, Nothing to delete"});
+        if(result.deletedCount>0){
+
+            return response.status(200).send({message:"All user stories are deleted from sprint!"});
         }
 
-        return response.status(200).send({message:"All user stories are deleted from sprint!"});
+        return response.status(400).json({message:"Sprint is empty, Nothing to delete"});
 
     }catch(error){
 

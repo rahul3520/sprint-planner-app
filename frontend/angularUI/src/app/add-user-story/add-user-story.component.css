@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+  }
+  
+label, input {
+    display: block;
+}
+
+label {
+    margin-bottom: 20px;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color: #555555;
+}
