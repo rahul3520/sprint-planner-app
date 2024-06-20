@@ -1,0 +1,31 @@
+<h1>
+    Sprint Calculator
+</h1>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+            <div class="row g-3">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                    <input type="number" class="form form-control" [(ngModel)]="maxPoint" placeholder="Sprint Point">
+                    <br>
+                    
+                    <label>
+                        <button class="button" (click)="generateSprint(maxPoint.value)">Auto Select Stories</button>
+                    </label>                   
+                    <br>
+        
+                    <button class="button" routerLink="/viewStory">Clear Stories</button>
+                    <br>
+        
+                    <button class="button" (click)="deleteSprint()">Clear Sprint</button>
+
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>
